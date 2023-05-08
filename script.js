@@ -17,13 +17,13 @@ translation.innerHTML = arr[num][1];
 console.log(word);
 console.log(translation);
 
-function click(){
+function click() {
     let value;
-    button.onclick = () =>{
+    button.onclick = () => {
         value = input.value;
         console.log(value);
-        if (value === translation.innerHTML){
-            flashcard.style.background = 'green';
+        if (value === translation.innerHTML) {
+            flashcard.style.background = 'lightgreen';
             translation.classList.add('correct');
             translation.classList.remove('two');
         } else {
@@ -34,9 +34,9 @@ function click(){
     }
 }
 
-function nextWord(){
-    next.onclick = () =>{
-        if (num === arr.length-1){
+function nextWord() {
+    next.onclick = () => {
+        if (num === arr.length - 1) {
             return
         } else {
             num++;
@@ -46,9 +46,10 @@ function nextWord(){
             translation.classList.add('two');
             word.innerHTML = arr[num][0];
             translation.innerHTML = arr[num][1];
+            input.value = '';
         }
     }
-    
+
 
 }
 click();
